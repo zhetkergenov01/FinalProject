@@ -154,7 +154,81 @@ export namespace ApiTypes {
         }
 
     }
+
+
+    export namespace Cards {
+        export namespace Get {
+            export type Query = {
+                cardAnswer?: string // не обязательно
+                cardQuestion?: string // не обязательно
+                cardsPack_id: string
+                min?: number // не обязательно
+                max?: number // не обязательно
+                sortCards?: number // не обязательно
+                page?: number // не обязательно
+                pageCount?: number // не обязательно
+            }
+            export type Card = {
+                answer: string
+                question: string
+                cardsPack_id: string
+                grade: number
+                rating: number
+                shots: number
+                type: string
+                user_id: string
+                created: string
+                updated: string
+                __v: number
+                _id: string
+            }
+            export type Resp = {
+                cards: Card[]
+                cardsTotalCount: number
+                maxGrade: number
+                minGrade: number
+                page: number
+                pageCount: number
+                packUserId: string
+            }
+        }
+
+        export namespace Post {
+            export type Req = {
+                card: {
+                    cardsPack_id: string
+                    question: string // если не отправить будет таким
+                    answer: string // если не отправить будет таким
+                    grade?: number // 0..5, не обязателен
+                    shots?: number // не обязателен
+                    rating?: number // не обязателен
+                    answerImg?: string // не обязателен
+                    questionImg?: string // не обязателен
+                    questionVideo?: string // не обязателен
+                    answerVideo?: string // не обязателен
+                    type?: string // если не отправить будет таким
+                }
+            }
+        }
+
+        export namespace Delete {
+            export type Query = {
+                id:string
+            }
+        }
+
+        export namespace Put {
+            export type Req = {
+                card: {
+                    _id: string
+                    question?: string // не обязательно
+                    comments?: string // не обязателен
+                }
+            }
+        }
+    }
 }
+
 
 
 

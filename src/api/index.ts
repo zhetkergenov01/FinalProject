@@ -8,6 +8,12 @@ export const $api = axios.create({
     }
 })
 
+$api.interceptors.request.use((request) => {
+    const token = localStorage.getItem("userToken")
+    request.headers.Authorization = 'Bearer ' + token
+    return request
+})
+
 
 
 

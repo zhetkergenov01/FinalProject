@@ -6,6 +6,7 @@ import {Register} from "./pages/register";
 import {NewPassword} from "./pages/new-password";
 import {ForgotPassword} from "./pages/forgot-password";
 import {PackList} from "./pages/pack-list";
+import {Cards} from "./pages/cards";
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
         <Route path={'/register'} element={<Register/>}/>
         <Route path={'/new-password'} element={<NewPassword/>}/>
         <Route path={'/forgot-password'} element={<ForgotPassword/>}/>
+        <Route path={'/cards'} element={<Cards/>}/>
     </Routes>
   )
 }
