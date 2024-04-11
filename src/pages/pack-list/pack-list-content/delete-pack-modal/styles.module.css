@@ -1,0 +1,19 @@
+.modalContent {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.deleteBtnBlock{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cancelBtn{
+    width: 100%;
+}
+
+.deleteBtn{
+    width: 100%;
+}

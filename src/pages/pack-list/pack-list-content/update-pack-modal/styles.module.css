@@ -1,0 +1,10 @@
+.modalContent {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Button{
+    min-width: 150px;
+    padding: 0 12px;
+}
